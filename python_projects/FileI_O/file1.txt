@@ -1,0 +1,353 @@
+strings are mutable.
+
+.net collection class that allows an element to be accessed using a unique key : ArrayList
+ we can inherit multiple interface.
+virtual keyword: means method can be overriden.
+Pens Object represent a drawing surface and provides methods for rendering to that drawing surface.
+An inherited control from an existing 1 cannot inherit 
+the visual representation of the base control.
+Globalization refers to formatting data based on locale.
+Role based security that protects systesm resources from unauthorized resource
+Postback occures in webform .
+web.config file is used to configure the web server.
+Link counter is not an asp component
+only 1 process should access the variable at a time. - Synchronize()
+The Paint() method must be overridden in a custome control.
+The Global Assembly Cache (GAC) is a folder in Windows directory to store the . 
+NET assemblies that are specifically designated to be shared by all applications executed on a system.
+GACmgr.exe - is used to manage GAC.
+System.Web.GUI.Page - webform class inherit from this bydefault.
+we can manage state by using application object.
+ControlToBind attribute must be set on a validater control for the validateion to work.
+Global.asax - it is used to declare global variables and implement application & session level eveents
+SQLISAPI.dll - this dll is used to translate xml to sql in iis.
+Session Object is used to maintain data across users.
+Application Object - it encapsulates the state of the client.
+Mode os storing asp.net method - StateServer
+GAC - it is the special folder within the windows folder that stores the shared .<net component
+Dataset is faster & consume less memory
+
+
+
+
+
+
+Some examples of strengths include:
+
+Creative
+Patient
+Empathetic
+Determined
+Flexible/Versatile
+Honest
+Enthusiastic/Passionate/Driven
+Collaborative
+Disciplined/Focused
+Committed/Dedicated
+Respectful
+Innovative
+Attentive/Detail oriented
+Action oriented/entrepreneurial
+
+
+
+Some examples of weaknesses include:
+
+Disorganised
+Self-critical/Sensitive
+Perfectionism (Note: this can be a strength in many roles so be sure you have an example of how perfectionism can be a problem to demonstrate that you’ve thought deeply about this trait)
+Shy/Not adept at public speaking
+Competitive (Note: Just like perfectionism, this can be a strength)
+Limited experience in a non-essential skill (especially if obvious on your resume)
+Not skilled at delegating tasks
+Take on too much responsibility
+Not detail oriented/Too detail oriented
+Not comfortable taking risks
+Too focused/Lack of focus
+
+this is the last line to the filethis is the 2nd last linethis is the 2nd last line
+
+
+
+
+LTIMindTree:
+
+Basic c# concept is missing
+
+Go through the design patterns ?
+
+what is private constructor ?
+
+how can i call the methods in private constructor ? where exactly it is used ?
+
+What is dependency injection ? what are the service injection available in .net core ?
+
+How are you integrating application insights into ur application to check the logs ?
+  
+what is singleton design pattern ?
+
+what is the difference between IEnumerable & Iquerable ?
+
+what is difference between singleordefault ?
+
+what is difference between first . FirstOrDefault() 
+   
+Difference between abstract & interface ?
+
+how do u authenticate your application ? how do u secure the web application ?
+
+how do u authenticate ur web api ?
+
+on what basis u will apply authentication ?
+
+ //if (hello[i].ToString() == " ")
+ //{
+ //    char newcharvalue = hello[i + 1];
+ //    int asciivalue1 = (int)newcharvalue;
+ //    int newval1 = asciivalue1 - 32;
+ //    char charvalue1 = (char)newval1;
+ //    Console.WriteLine(charvalue1);
+ //    hellovalue = hellovalue + " " +charvalue1.ToString();
+ //}
+ //else
+ //{
+ //    hellovalue = hellovalue + hello[i].ToString();
+ //}  
+
+
+Hexaware ?
+
+
+
+what is yield keyword in c# ?
+
+suppose there are 3 people performing same action r updating the same records , how will u handle that scenario ? which concept u will use in c# for this ?
+
+i have a username & password ? how can i secure it using cloud services ? - we have to use azure key vault services.
+
+what is managed identity ? what is this used for ?
+  
+what is the difference between primary & unique key ?
+
+how do you convert a legacy application to cloud ?
+
+what is the deployment process in .net core  using cloud ? - done
+
+how do u deploy a webjob in cloud ? - done
+
+how do u set CRON expression in the webjob ?
+
+what is cron expression ?
+
+in your code is there anything you can setup cron expression ?
+
+i have to do logging activity in cloud, how can i do that ?
+
+i have a db, legacy app, some application runs in some interval ? how can i migrate the application to clod, which cloud service i need to use to migrate the app ?
+
+I have sql db , how can migrate it into cloud ?
+
+i have a shared folder which is in some internal or teams floder ? which cloud service i can use to keep my shared folder records ?
+
+Ans - we can use azure container to store the documents.
+
+how do i check logs in cloud ?
+where exactly do u check logs for webjob ? - done
+
+if my webjob is not working how can i check it in cloud ?- I have to check the logs by navigating to the specific webjob & logs action on that webjob page itself.
+
+what are the transactions available in sql ?
+
+why SP's are faster than inline function ?
+
+
+
+fractal.ai:
+
+what is generics concept ?
+
+please write the piece of code for generics ?
+
+what is middleware ? can u write the piece of code for middleware ? i have httpcontext & want to create a custom middleware for this ? 
+
+explain the terms of middleware like singleton, transient, scoped ?
+
+what are the return type available in mvc ? when i want to pass control from 1 controller to another which return type i should use ?
+
+what is a singleton design pattern ? can u explain by writing code  here or in verbally ?
+
+have u used any other design pattern other than singleton ?
+
+how can i stop the middleware pipeline ? 
+
+how can u create a custom middleware ?
+
+what is webapps ? what is logic apps ? 
+
+when i want to pass data from controller to controller which mechanism i have to use ?
+
+how do you increase the performance using web app ?
+
+by sing scale up & scale out.
+
+Use azure autoscale to automatically add or remove instance based on load. 	
+
+SQL ? write a code which returns department & count of employee from department table ?
+SELECT 
+    DepartmentName, 
+    COUNT(EmployeeId) AS EmployeeCount
+FROM 
+    Department
+GROUP BY 
+    DepartmentName;
+
+
+
+Why did you got early release from your org ?
+
+I received an early release from my previous organization and am now actively seeking opportunities that align with my skills and long-term career goals. This period has given me the flexibility to explore roles where I can contribute meaningfully and continue to grow professionally.
+
+
+Cognizant (.net & Azure):
+
+1. Solid Principle
+2. What is SQL Trigger
+3. What is Stored Procedure 
+4. Azure key vault, how to access the keyvault in .net core ?
+5. Have u worked on CI/CD Pipeline ?
+6. How do u authenticate your function app ?
+7. What are the plans available in Azure app service ?
+8. Garbage Collector ? how can i use in unmanaged code ?
+9. what are your responsibility apart from your task ?
+10. How do u manage a team ?
+11. What is boxing & unboxing ?
+12. Have u worked on SQL () ? 
+13. What is durable function ?
+14. Have u worked on azure service bus ?
+15. What are the azure service plan ?
+16. MIcroservice Architecture ?
+17. What is CTE ?
+
+Feedback ?
+
+You are strong at your basics , but you need to know more about CI CD pipeline ?
+Learn things on Azure ?
+
+Need to learn this 3:
+SignalR ? 
+Microsoft Graph API integration ?
+CI/CD pipeline ?
+
+AZ-104 playlist or AZ-500 playlist go through this for more details on azure active directory.
+
+
+Logichive L1:    
+
+1. what is events & delegates ?
+2. What is dependency injection concept ?
+3. What is azure keyvault ?
+4. What is the use of Azure service bus ?
+5. What is the difference between azure service bus & event grid ? - done
+6. How do you integrate your database logic in .net core project ? - done
+7. How do you integrate function app with keyvault ?
+8. Can you explain SOLID principle ?
+9. What is azure function ? why do we use it ?
+10. How can u perform logging in .net project ? - done
+11. What is the difference between .net core & .net framework ? - done
+12. What is garbage collector ? what are the generations available in garbage collector ? - done
+13. How is garbage collector helps in unmanaged code ?  - done
+14 What is IEnuerable ?
+15. Difference between IQuerable & IEnumerable ?
+16. What is LINQ ?
+17. What is lamda expression ?
+
+write program to print  this in 2 value:
+001234.123.056.123456/24
+
+1st value: 001234.123.056.123456
+2nd value: 24
+
+
+string pattern = @"^0*(\d+)\.(\d{3})\.(\d{3})\.(\d{6})\/(\d{1,2})$";
+
+
+CBA:
+
+1. How does bot framework work ?
+2. What are the best practices we should follow while working with Bot Framework ?
+3. What are the azure SQL database security approaches ?
+4. How do u secure your application in bot framework ?
+5. What is Model binding in .net core ?
+6. How do you increase your performace in a bot project ?
+7. write code for singleton design pattern ?
+8. what is state management in azure bot ?
+
+
+Kanini:
+
+1. what are arithmetic operator & logical operator ?
+2. Abstract & interface ?
+3. What is CTE ?
+4. what is the difference between CTE & View ?
+5. EF ORM Model ?
+6. what are the properties available in ER ORM Model to get the details from databse ?
+7. Linq query where i need customer id, customer name and deliver details from customer table & order table where customer id is the foreign key of order table.
+8. what is difference between scoped & transient ?
+9. What is DB Context ? what is the use of db context ? can u explain different uses of DBContext ?
+10. If i want to authenticate what are the filters i can use ?
+11. Difference between OAuth & JWT token authentication ?
+12. What are the http verbs ?
+13. Explain Multithreading ?
+14. If 2 threads are accessing the same resource, then how can we resolve it ?
+15. What are aggregate function in SQL ?
+
+MPhasis:
+
+right array rotation, write a code for that ?
+
+L2:
+
+what is difference between transient & scoped ?
+
+how can i add my separate project to as a custom middleware in my application ?
+
+what is SQL function ?
+
+what is CTE in SQL & what is the lifetime of CTE ?
+
+Can u explain SQL Stored procedure  & the advantages of SP ?
+
+How do you store the connection details in .net core application ?
+
+HR Discussion:
+
+I am currently focusing on opportunities that align more closely with my long-term career goals and financial expectations.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+

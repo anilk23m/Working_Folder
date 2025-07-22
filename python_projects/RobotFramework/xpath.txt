@@ -1,0 +1,7 @@
+//div[span[text()='WK-Batter']]/text()[1]
+//a[contains(@class, 'cb-text-link') and normalize-space(text())='Labuschagne'][1]
+<a href="/profiles/7710/mitchell-starc" title="View profile of Mitchell Starc" class="cb-text-link"> Mitchell Starc </a>
+//a[contains(@class, 'cb-text-link') and normalize-space(text())='Mitchell Starc'][1]
+
+
+

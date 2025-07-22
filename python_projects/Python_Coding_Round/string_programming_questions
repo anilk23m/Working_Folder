@@ -1,0 +1,77 @@
+Certainly! Here are some **interview-style Python string problems** similar to your example (case-insensitive comparison, uniqueness, frequency, ordering):
+
+---
+
+### 🔹 1. **First Non-Repeating Character (Case-Insensitive)**
+
+**Problem:**
+Given a string, return the first character that doesn’t repeat (ignoring case).
+**Example:**
+`"Swiss"` → `'w'`
+
+---
+
+### 🔹 2. **Remove Characters That Appear More Than Once (Case-Insensitive)**
+
+**Problem:**
+From a string, remove characters that appear more than once regardless of case.
+**Example:**
+`"Programming"` → `"Po"`
+
+---
+
+### 🔹 3. **Check for Anagram (Case-Insensitive)**
+
+**Problem:**
+Check if two strings are anagrams of each other, ignoring case.
+**Example:**
+`"Listen"` and `"Silent"` → `True`
+
+---
+
+### 🔹 4. **Group Characters by Case**
+
+**Problem:**
+Separate uppercase and lowercase characters while preserving the original order.
+**Example:**
+`"AaSsBi"` → `Uppercase: 'ASB', Lowercase: 'asi'`
+
+---
+
+### 🔹 5. **Count Characters That Appear Only Once (Case-Insensitive)**
+
+**Problem:**
+Count how many characters appear exactly once in the string, case-insensitive.
+**Example:**
+`"Teeter"` → Output: 2 (characters: 'r', 't')
+
+---
+
+### 🔹 6. **Find All Unique Characters (Preserve Order)**
+
+**Problem:**
+Print all characters that appear only once (case-insensitive) in the original order.
+**Example:**
+`"AaSsBi"` → `"Bi"`
+
+---
+
+### 🔹 7. **Are Two Strings Isomorphic (Case-Insensitive)?**
+
+**Problem:**
+Two strings are isomorphic if the characters in one string can be replaced to get the second string.
+**Example:**
+`"foo"` and `"app"` → `True`
+
+---
+
+### 🔹 8. **Longest Substring with Unique Characters**
+
+**Problem:**
+Find the length of the longest substring with all unique characters (case-sensitive or insensitive as needed).
+**Example:**
+`"abcABC"` → `6`
+
+---
+
+Would you like a downloadable practice set or want any of these turned into coding exercises with full solutions?

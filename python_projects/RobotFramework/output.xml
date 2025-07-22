@@ -1,0 +1,435 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.3 (Python 3.10.0 on win32)" generated="2025-06-14T21:36:54.176493" rpa="false" schemaversion="5">
+<suite id="s1" name="API test" source="D:\Python folder\python_projects\RobotFramework\API_test.robot">
+<test id="s1-t1" name="Validate Get API Response" line="13">
+<kw name="Create Session" owner="RequestsLibrary">
+<msg time="2025-06-14T21:36:54.463848" level="INFO">Creating Session using : alias=mysession, url=https://jsonplaceholder.typicode.com, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<arg>mysession</arg>
+<arg>${BASE_URL}</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<status status="PASS" start="2025-06-14T21:36:54.462795" elapsed="0.001053"/>
+</kw>
+<kw name="Get Request" owner="RequestsLibrary">
+<msg time="2025-06-14T21:36:54.464905" level="WARN">Keyword 'RequestsLibrary.Get Request' is deprecated. Please use `GET On Session` instead.</msg>
+<msg time="2025-06-14T21:36:54.557762" level="INFO">GET Request : url=https://jsonplaceholder.typicode.com/posts/1 
+ path_url=/posts/1 
+ headers={'User-Agent': 'python-requests/2.32.3', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} 
+ body=None 
+ </msg>
+<msg time="2025-06-14T21:36:54.557762" level="INFO">GET Response : url=https://jsonplaceholder.typicode.com/posts/1 
+ status=200, reason=OK 
+ headers={'Date': 'Sat, 14 Jun 2025 16:06:54 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Server': 'cloudflare', 'Report-To': '{"group":"heroku-nel","max_age":3600,"endpoints":[{"url":"https://nel.heroku.com/reports?ts=1745348618&amp;sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d&amp;s=lvQhl8wdxVqr7l6sVhWun0bQ%2BMz0wfwipoa%2FTbmUo7w%3D"}]}', 'Reporting-Endpoints': 'heroku-nel=https://nel.heroku.com/reports?ts=1745348618&amp;sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d&amp;s=lvQhl8wdxVqr7l6sVhWun0bQ%2BMz0wfwipoa%2FTbmUo7w%3D', 'Nel': '{"report_to":"heroku-nel","max_age":3600,"success_fraction":0.005,"failure_fraction":0.05,"response_headers":["Via"]}', 'X-Powered-By': 'Express', 'X-Ratelimit-Limit': '1000', 'X-Ratelimit-Remaining': '999', 'X-Ratelimit-Reset': '1745348653', 'Vary': 'Origin, Accept-Encoding', 'Access-Control-Allow-Credentials': 'true', 'Cache-Control': 'max-age=43200', 'Pragma': 'no-cache', 'Expires': '-1', 'X-Content-Type-Options': 'nosniff', 'Etag': 'W/"124-yiKdLzqO5gfBrJFrcdJ8Yq0LGnU"', 'Via': '1.1 vegur', 'Age': '20322', 'Cf-Cache-Status': 'HIT', 'Content-Encoding': 'gzip', 'CF-RAY': '94fb13de8f30f599-MAA', 'alt-svc': 'h3=":443"; ma=86400'} 
+ body={
+  "userId": 1,
+  "id": 1,
+  "title": "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
+  "body": "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto"
+} 
+ </msg>
+<msg time="2025-06-14T21:36:54.557762" level="INFO">C:\Users\PUSPANJALI MUDULI\AppData\Local\Programs\Python\Python310\lib\site-packages\urllib3\connectionpool.py:1097: InsecureRequestWarning: Unverified HTTPS request is being made to host 'jsonplaceholder.typicode.com'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(</msg>
+<msg time="2025-06-14T21:36:54.558788" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<var>${response}</var>
+<arg>mysession</arg>
+<arg>${ENDPOINT}</arg>
+<doc>*DEPRECATED* Please use `GET On Session` instead.</doc>
+<status status="PASS" start="2025-06-14T21:36:54.464905" elapsed="0.093883"/>
+</kw>
+<kw name="Should Be Equal As Integers" owner="BuiltIn">
+<msg time="2025-06-14T21:36:54.560856" level="INFO">Argument types are:
+&lt;class 'int'&gt;
+&lt;class 'str'&gt;</msg>
+<arg>${response.status_code}</arg>
+<arg>200</arg>
+<doc>Fails if objects are unequal after converting them to integers.</doc>
+<status status="PASS" start="2025-06-14T21:36:54.558788" elapsed="0.002068"/>
+</kw>
+<kw name="To Json" owner="RequestsLibrary">
+<msg time="2025-06-14T21:36:54.560856" level="WARN">Keyword 'RequestsLibrary.To Json' is deprecated. Please use ${resp.json()} instead. Have a look at the improved HTML output as pretty printing replacement.</msg>
+<msg time="2025-06-14T21:36:54.562894" level="INFO">To JSON using : content={
+  "userId": 1,
+  "id": 1,
+  "title": "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
+  "body": "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto"
+} </msg>
+<msg time="2025-06-14T21:36:54.562894" level="INFO">To JSON using : pretty_print=False </msg>
+<msg time="2025-06-14T21:36:54.562894" level="INFO">${response_body} = {'userId': 1, 'id': 1, 'title': 'sunt aut facere repellat provident occaecati excepturi optio reprehenderit', 'body': 'quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit...</msg>
+<var>${response_body}</var>
+<arg>${response.content}</arg>
+<doc>*DEPRECATED* Please use ${resp.json()} instead. Have a look at the improved HTML output as pretty printing replacement.</doc>
+<status status="PASS" start="2025-06-14T21:36:54.560856" elapsed="0.002038"/>
+</kw>
+<kw name="Dictionary Should Contain Key" owner="Collections">
+<arg>${response_body}</arg>
+<arg>title</arg>
+<doc>Fails if ``key`` is not found from ``dictionary``.</doc>
+<status status="PASS" start="2025-06-14T21:36:54.563970" elapsed="0.000000"/>
+</kw>
+<kw name="Dictionary Should Contain Key" owner="Collections">
+<arg>${response_body}</arg>
+<arg>userId</arg>
+<doc>Fails if ``key`` is not found from ``dictionary``.</doc>
+<status status="PASS" start="2025-06-14T21:36:54.565042" elapsed="0.000000"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<msg time="2025-06-14T21:36:54.567177" level="INFO">Argument types are:
+&lt;class 'int'&gt;
+&lt;class 'str'&gt;</msg>
+<arg>${response_body['id']}</arg>
+<arg>1</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2025-06-14T21:36:54.566151" elapsed="0.001026"/>
+</kw>
+<kw name="Get File" owner="OperatingSystem">
+<msg time="2025-06-14T21:36:54.568186" level="INFO" html="true">Getting file '&lt;a href="file://D:\Python folder\python_projects\RobotFramework\sample_data.json"&gt;D:\Python folder\python_projects\RobotFramework\sample_data.json&lt;/a&gt;'.</msg>
+<msg time="2025-06-14T21:36:54.569228" level="INFO">${json_data} = [
+   {
+      "id":1,
+      "name":"Apple iPhone 12",
+      "description":"The Apple iPhone 12 features a 6.1-inch Super Retina XDR display and A14 Bionic chip.",
+      "price":999.00,
+      "category"...</msg>
+<var>${json_data}</var>
+<arg>sample_data.json</arg>
+<doc>Returns the contents of a specified file.</doc>
+<status status="PASS" start="2025-06-14T21:36:54.568186" elapsed="0.001042"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-06-14T21:36:54.572455" level="INFO">${data} = [{'id': 1, 'name': 'Apple iPhone 12', 'description': 'The Apple iPhone 12 features a 6.1-inch Super Retina XDR display and A14 Bionic chip.', 'price': 999.0, 'category': 'Electronics', 'image': 'https...</msg>
+<var>${data}</var>
+<arg>json.loads('''${json_data}''')</arg>
+<arg>modules=json</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2025-06-14T21:36:54.569228" elapsed="0.004295"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-06-14T21:36:54.574579" level="INFO">[{'id': 1, 'name': 'Apple iPhone 12', 'description': 'The Apple iPhone 12 features a 6.1-inch Super Retina XDR display and A14 Bionic chip.', 'price': 999.0, 'category': 'Electronics', 'image': 'https://www.apple.com/newsroom/images/product/iphone/standard/Apple_iPhone-12_red-product(1)_10132020_big.jpg.large.jpg'}, {'id': 2, 'name': 'Samsung Galaxy S21', 'description': 'The Samsung Galaxy S21 features a 6.2-inch Dynamic AMOLED display and Exynos 2100 chip.', 'price': 799.0, 'category': 'Electronics', 'image': 'https://images.samsung.com/is/image/samsung/p6pim/in/sm-g991bzviinu/gallery/in-galaxy-s21-5g-g991-sm-g991bzviinu-thumb-346754727?$LazyLoad_Home_IMG$'}, {'id': 3, 'name': 'Sony PlayStation 5', 'description': 'The Sony PlayStation 5 features an AMD Zen 2-based CPU, AMD RDNA 2-based GPU, and 16GB of GDDR6 memory.', 'price': 499.99, 'category': 'Electronics', 'image': 'https://www.sony.com/image/44baa604124b770c82401a2dbd78ebaf?fmt=pjpeg&amp;wid=720&amp;bgcolor=F1F5F9&amp;bgc=F1F5F9'}, {'id': 4, 'name': 'LG OLED55CXPUA 55-inch 4K OLED TV', 'description': 'The LG OLED55CXPUA 55-inch 4K OLED TV features OLED Display, 4K UHD Resolution, HDR10 Pro, HLG Pro, Dolby Vision IQ, and Dolby Atmos.', 'price': 1599.99, 'category': 'Electronics', 'image': 'https://www.lg.com/us/images/tvs/md07501804/gallery/desktop-01.jpg'}, {'id': 5, 'name': 'Bose QuietComfort 35 II Wireless Headphones', 'description': 'The Bose QuietComfort 35 II Wireless Headphones feature world-class noise cancellation and voice control.', 'price': 299.0, 'category': 'Electronics', 'image': 'https://assets.bose.com/content/dam/Bose_DAM/Web/consumer_electronics/global/products/headphones/quietcomfort_35_ii_silver/product_silo_images/qc35ii_silver_EC_hero_010719.psd/_jcr_content/renditions/cq5dam.web.720.720.jpeg'}, {'id': 6, 'name': 'Fitbit Versa 3 Smartwatch', 'description': 'The Fitbit Versa 3 Smartwatch features a built-in GPS, Active Zone Minutes, and voice assistant.', 'price': 229.95, 'category': 'Electronics', 'image': 'https://www.fitbit.com/global/content/dam/fitbit/global/pdp/versa-3/hero/PDP-Versa-3-Carbon-Aluminum-Hero.png'}, {'id': 7, 'name': 'KitchenAid Stand Mixer', 'description': 'The KitchenAid Stand Mixer features a 5-quart stainless steel bowl, 10-speed settings, and a variety of attachments.', 'price': 399.99, 'category': 'Home &amp; Kitchen', 'image': 'https://www.kitchenaid.com/content/dam/global/kitchenaid/countertop-appliances/stand-mixers/hero-kitchenaid-stand-mixers-ksm150ps-bw-1600.png'}, {'id': 8, 'name': 'Dyson V11 Absolute Cordless Vacuum', 'description': 'The Dyson V11 Absolute Cordless Vacuum features powerful suction and up to 60 minutes of runtime.', 'price': 699.99, 'category': 'Home Appliances', 'image': 'https://www.dysoncanada.ca/dam/dyson/images/promotions/desktop-promotions/v11-absolute-blue-desktop-3col-242x254.jpg'}, {'id': 9, 'name': 'Ninja Foodi Smart XL Grill', 'description': 'The Ninja Foodi Smart XL Grill features 6-in-1 functionality and 4-quart crisper basket.', 'price': 279.99, 'category': 'Home &amp; Kitchen', 'image': 'https://www.ninjakitchen.com/medias/Ninja-OP500W-Foodi-Smart-XL-6-in-1-Indoor-Grill-with-4-qt-Air-Fryer-and-Dehydrator-2.png?context=bWFzdGVyfGltYWdlc3wyNjAwMDh8aW1hZ2UvcG5nfGltYWdlcy9oMTYvaDIzLzkxNzA0MTU0NTE5MjYucG5nfDM2NzllYjM5YzI5NmMxZWE5ZjQ5ZDY3MTBhMTY4YWE4NTY4YjczOTJmMzkwZGJmYmZiNDEyMTM1YmYwMTg2MzQ'}, {'id': 10, 'name': 'Canon EOS Rebel T8i DSLR Camera', 'description': 'The Canon EOS Rebel T8i DSLR Camera features a 24.1-megapixel sensor and DIGIC 8 image processor.', 'price': 899.0, 'category': 'Electronics', 'image': 'https://www.canon.com.au/-/media/images/products/cameras/dslr/canon-eos-rebel-t8i/canon-eos-rebel-t8i-hero-product-image.jpg'}, {'id': 11, 'name': 'Apple AirPods Pro', 'description': 'The Apple AirPods Pro feature active noise cancellation and customizable fit.', 'price': 249.0, 'category': 'Electronics', 'image': 'https://www.apple.com/v/airpods-pro/b/images/meta/og__amg0zzu6pau6_preview.png'}, {'id': 12, 'name': 'Bose QuietComfort 35 II Wireless Headphones', 'description': 'The Bose QuietComfort 35 II Wireless Headphones feature noise cancellation and Alexa voice control.', 'price': 299.0, 'category': 'Electronics', 'image': 'https://assets.bose.com/content/dam/Bose_DAM/Web/consumer_electronics/global/products/headphones/quietcomfort_35_ii/product_silo_images/qc35_ii_black_EC_hero_010718.psd/_jcr_content/renditions/cq5dam.web.320.320.jpeg'}, {'id': 13, 'name': 'Fitbit Charge 4 Fitness Tracker', 'description': 'The Fitbit Charge 4 Fitness Tracker features GPS and Active Zone Minutes.', 'price': 129.95, 'category': 'Electronics', 'image': 'https://www.fitbit.com/global/content/dam/fitbit/global/pdp/charge-4/hero/PDP-Charge-4-Black-Hero.png'}, {'id': 14, 'name': 'Samsung Galaxy Watch3', 'description': 'The Samsung Galaxy Watch3 features a rotating bezel and health tracking.', 'price': 399.99, 'category': 'Electronics', 'image': 'https://images.samsung.com/is/image/samsung/assets/us/watches/galaxy-watch3/images/gallery/galaxy-watch3-01.png?$720_576_PNG$'}, {'id': 15, 'name': 'Sony WH-1000XM4 Wireless Noise-Cancelling Headphones', 'description': 'The Sony WH-1000XM4 Wireless Noise-Cancelling Headphones feature noise cancellation and touch controls.', 'price': 349.99, 'category': 'Electronics', 'image': 'https://www.sony.com/image/1cdd6354c4cd21cc4f7ec78f9e9ad165?fmt=pjpeg&amp;wid=660&amp;hei=660&amp;bgcolor=F1F5F9&amp;bgc=F1F5F9'}, {'id': 16, 'name': 'Breville Barista Express Espresso Machine', 'description': 'The Breville Barista Express Espresso Machine features a built-in conical burr grinder and steam wand.', 'price': 699.95, 'category': 'Home &amp; Kitchen', 'image': 'https://www.breville.com/content/dam/breville/ca/Images/Products/Espresso/BES870XL/hero.jpg'}, {'id': 17, 'name': 'Keurig K-Elite Coffee Maker', 'description': 'The Keurig K-Elite Coffee Maker features a strong brew setting and iced coffee setting.', 'price': 169.99, 'category': 'Home &amp; Kitchen', 'image': 'https://www.keurig.com/content/dam/global-ecom/landing-pages/k-elite/k-elite-product-page/k-elite-platinum.png'}, {'id': 18, 'name': 'iRobot Roomba i7+ Robot Vacuum', 'description': 'The iRobot Roomba i7+ Robot Vacuum features automatic dirt disposal and smart mapping.', 'price': 799.99, 'category': 'Home &amp; Kitchen', 'image': 'https://store.irobot.com/default/i7-vacuuming-robot/i755020/irobot-roomba-i7-robot-vacuum/1.png'}, {'id': 19, 'name': 'Ninja Foodi Digital Air Fry Oven', 'description': 'The Ninja Foodi Digital Air Fry Oven features 8 functions and a 60-second preheat.', 'price': 209.99, 'category': 'Home &amp; Kitchen', 'image': 'https://www.ninjakitchen.com/static/img/products/cov/ninja-foodi-digital-air-fry-oven-SP101.png'}, {'id': 20, 'name': 'Cuisinart ICE-70 Ice Cream Maker', 'description': 'The Cuisinart ICE-70 Ice Cream Maker features a 2-quart capacity and 3 settings.', 'price': 139.99, 'category': 'Home &amp; Kitchen', 'image': 'https://www.cuisinart.com/share/images/products/large/ICE-70.png'}]</msg>
+<arg>${data}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-06-14T21:36:54.573523" elapsed="0.001056"/>
+</kw>
+<for flavor="IN">
+<iter>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>${i["id"]} == 10</arg>
+<arg>Set To Dictionary</arg>
+<arg>${i}</arg>
+<arg>price</arg>
+<arg>100</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2025-06-14T21:36:54.575632" elapsed="0.001643"/>
+</kw>
+<var name="${i}">{'id': 1, 'name': 'Apple iPhone 12', 'description': 'The Apple iPhone 12 features a 6.1-inch Super Retina XDR display and A14 Bionic chip.', 'price': 999.0, 'category': 'Electronics', 'image': 'https:...</var>
+<status status="PASS" start="2025-06-14T21:36:54.575632" elapsed="0.001643"/>
+</iter>
+<iter>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>${i["id"]} == 10</arg>
+<arg>Set To Dictionary</arg>
+<arg>${i}</arg>
+<arg>price</arg>
+<arg>100</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2025-06-14T21:36:54.577275" elapsed="0.001079"/>
+</kw>
+<var name="${i}">{'id': 2, 'name': 'Samsung Galaxy S21', 'description': 'The Samsung Galaxy S21 features a 6.2-inch Dynamic AMOLED display and Exynos 2100 chip.', 'price': 799.0, 'category': 'Electronics', 'image': 'h...</var>
+<status status="PASS" start="2025-06-14T21:36:54.577275" elapsed="0.002149"/>
+</iter>
+<iter>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>${i["id"]} == 10</arg>
+<arg>Set To Dictionary</arg>
+<arg>${i}</arg>
+<arg>price</arg>
+<arg>100</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2025-06-14T21:36:54.579424" elapsed="0.001072"/>
+</kw>
+<var name="${i}">{'id': 3, 'name': 'Sony PlayStation 5', 'description': 'The Sony PlayStation 5 features an AMD Zen 2-based CPU, AMD RDNA 2-based GPU, and 16GB of GDDR6 memory.', 'price': 499.99, 'category': 'Electron...</var>
+<status status="PASS" start="2025-06-14T21:36:54.579424" elapsed="0.002180"/>
+</iter>
+<iter>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>${i["id"]} == 10</arg>
+<arg>Set To Dictionary</arg>
+<arg>${i}</arg>
+<arg>price</arg>
+<arg>100</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2025-06-14T21:36:54.581604" elapsed="0.002151"/>
+</kw>
+<var name="${i}">{'id': 4, 'name': 'LG OLED55CXPUA 55-inch 4K OLED TV', 'description': 'The LG OLED55CXPUA 55-inch 4K OLED TV features OLED Display, 4K UHD Resolution, HDR10 Pro, HLG Pro, Dolby Vision IQ, and Dolby At...</var>
+<status status="PASS" start="2025-06-14T21:36:54.581604" elapsed="0.002151"/>
+</iter>
+<iter>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>${i["id"]} == 10</arg>
+<arg>Set To Dictionary</arg>
+<arg>${i}</arg>
+<arg>price</arg>
+<arg>100</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2025-06-14T21:36:54.583755" elapsed="0.002125"/>
+</kw>
+<var name="${i}">{'id': 5, 'name': 'Bose QuietComfort 35 II Wireless Headphones', 'description': 'The Bose QuietComfort 35 II Wireless Headphones feature world-class noise cancellation and voice control.', 'price': 29...</var>
+<status status="PASS" start="2025-06-14T21:36:54.583755" elapsed="0.002125"/>
+</iter>
+<iter>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>${i["id"]} == 10</arg>
+<arg>Set To Dictionary</arg>
+<arg>${i}</arg>
+<arg>price</arg>
+<arg>100</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2025-06-14T21:36:54.586943" elapsed="0.001066"/>
+</kw>
+<var name="${i}">{'id': 6, 'name': 'Fitbit Versa 3 Smartwatch', 'description': 'The Fitbit Versa 3 Smartwatch features a built-in GPS, Active Zone Minutes, and voice assistant.', 'price': 229.95, 'category': 'Electron...</var>
+<status status="PASS" start="2025-06-14T21:36:54.585880" elapsed="0.002129"/>
+</iter>
+<iter>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>${i["id"]} == 10</arg>
+<arg>Set To Dictionary</arg>
+<arg>${i}</arg>
+<arg>price</arg>
+<arg>100</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2025-06-14T21:36:54.589075" elapsed="0.001069"/>
+</kw>
+<var name="${i}">{'id': 7, 'name': 'KitchenAid Stand Mixer', 'description': 'The KitchenAid Stand Mixer features a 5-quart stainless steel bowl, 10-speed settings, and a variety of attachments.', 'price': 399.99, 'cat...</var>
+<status status="PASS" start="2025-06-14T21:36:54.588009" elapsed="0.002135"/>
+</iter>
+<iter>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>${i["id"]} == 10</arg>
+<arg>Set To Dictionary</arg>
+<arg>${i}</arg>
+<arg>price</arg>
+<arg>100</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2025-06-14T21:36:54.591200" elapsed="0.002159"/>
+</kw>
+<var name="${i}">{'id': 8, 'name': 'Dyson V11 Absolute Cordless Vacuum', 'description': 'The Dyson V11 Absolute Cordless Vacuum features powerful suction and up to 60 minutes of runtime.', 'price': 699.99, 'category':...</var>
+<status status="PASS" start="2025-06-14T21:36:54.591200" elapsed="0.002159"/>
+</iter>
+<iter>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>${i["id"]} == 10</arg>
+<arg>Set To Dictionary</arg>
+<arg>${i}</arg>
+<arg>price</arg>
+<arg>100</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2025-06-14T21:36:54.593359" elapsed="0.002119"/>
+</kw>
+<var name="${i}">{'id': 9, 'name': 'Ninja Foodi Smart XL Grill', 'description': 'The Ninja Foodi Smart XL Grill features 6-in-1 functionality and 4-quart crisper basket.', 'price': 279.99, 'category': 'Home &amp; Kitchen'...</var>
+<status status="PASS" start="2025-06-14T21:36:54.593359" elapsed="0.002119"/>
+</iter>
+<iter>
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Set To Dictionary" owner="Collections">
+<arg>${i}</arg>
+<arg>price</arg>
+<arg>100</arg>
+<doc>Adds the given ``key_value_pairs`` and/or ``items`` to the ``dictionary``.</doc>
+<status status="PASS" start="2025-06-14T21:36:54.598990" elapsed="0.001128"/>
+</kw>
+<arg>${i["id"]} == 10</arg>
+<arg>Set To Dictionary</arg>
+<arg>${i}</arg>
+<arg>price</arg>
+<arg>100</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2025-06-14T21:36:54.596894" elapsed="0.003224"/>
+</kw>
+<var name="${i}">{'id': 10, 'name': 'Canon EOS Rebel T8i DSLR Camera', 'description': 'The Canon EOS Rebel T8i DSLR Camera features a 24.1-megapixel sensor and DIGIC 8 image processor.', 'price': 899.0, 'category': 'E...</var>
+<status status="PASS" start="2025-06-14T21:36:54.595478" elapsed="0.004640"/>
+</iter>
+<iter>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>${i["id"]} == 10</arg>
+<arg>Set To Dictionary</arg>
+<arg>${i}</arg>
+<arg>price</arg>
+<arg>100</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2025-06-14T21:36:54.601217" elapsed="0.001121"/>
+</kw>
+<var name="${i}">{'id': 11, 'name': 'Apple AirPods Pro', 'description': 'The Apple AirPods Pro feature active noise cancellation and customizable fit.', 'price': 249.0, 'category': 'Electronics', 'image': 'https://www...</var>
+<status status="PASS" start="2025-06-14T21:36:54.600118" elapsed="0.002220"/>
+</iter>
+<iter>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>${i["id"]} == 10</arg>
+<arg>Set To Dictionary</arg>
+<arg>${i}</arg>
+<arg>price</arg>
+<arg>100</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2025-06-14T21:36:54.603437" elapsed="0.001098"/>
+</kw>
+<var name="${i}">{'id': 12, 'name': 'Bose QuietComfort 35 II Wireless Headphones', 'description': 'The Bose QuietComfort 35 II Wireless Headphones feature noise cancellation and Alexa voice control.', 'price': 299.0, ...</var>
+<status status="PASS" start="2025-06-14T21:36:54.603437" elapsed="0.002196"/>
+</iter>
+<iter>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>${i["id"]} == 10</arg>
+<arg>Set To Dictionary</arg>
+<arg>${i}</arg>
+<arg>price</arg>
+<arg>100</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2025-06-14T21:36:54.605633" elapsed="0.002201"/>
+</kw>
+<var name="${i}">{'id': 13, 'name': 'Fitbit Charge 4 Fitness Tracker', 'description': 'The Fitbit Charge 4 Fitness Tracker features GPS and Active Zone Minutes.', 'price': 129.95, 'category': 'Electronics', 'image': '...</var>
+<status status="PASS" start="2025-06-14T21:36:54.605633" elapsed="0.002201"/>
+</iter>
+<iter>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>${i["id"]} == 10</arg>
+<arg>Set To Dictionary</arg>
+<arg>${i}</arg>
+<arg>price</arg>
+<arg>100</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2025-06-14T21:36:54.607834" elapsed="0.002201"/>
+</kw>
+<var name="${i}">{'id': 14, 'name': 'Samsung Galaxy Watch3', 'description': 'The Samsung Galaxy Watch3 features a rotating bezel and health tracking.', 'price': 399.99, 'category': 'Electronics', 'image': 'https://ima...</var>
+<status status="PASS" start="2025-06-14T21:36:54.607834" elapsed="0.002201"/>
+</iter>
+<iter>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>${i["id"]} == 10</arg>
+<arg>Set To Dictionary</arg>
+<arg>${i}</arg>
+<arg>price</arg>
+<arg>100</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2025-06-14T21:36:54.611133" elapsed="0.002238"/>
+</kw>
+<var name="${i}">{'id': 15, 'name': 'Sony WH-1000XM4 Wireless Noise-Cancelling Headphones', 'description': 'The Sony WH-1000XM4 Wireless Noise-Cancelling Headphones feature noise cancellation and touch controls.', 'pr...</var>
+<status status="PASS" start="2025-06-14T21:36:54.611133" elapsed="0.002238"/>
+</iter>
+<iter>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>${i["id"]} == 10</arg>
+<arg>Set To Dictionary</arg>
+<arg>${i}</arg>
+<arg>price</arg>
+<arg>100</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2025-06-14T21:36:54.613371" elapsed="0.002161"/>
+</kw>
+<var name="${i}">{'id': 16, 'name': 'Breville Barista Express Espresso Machine', 'description': 'The Breville Barista Express Espresso Machine features a built-in conical burr grinder and steam wand.', 'price': 699.95...</var>
+<status status="PASS" start="2025-06-14T21:36:54.613371" elapsed="0.002161"/>
+</iter>
+<iter>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>${i["id"]} == 10</arg>
+<arg>Set To Dictionary</arg>
+<arg>${i}</arg>
+<arg>price</arg>
+<arg>100</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2025-06-14T21:36:54.616596" elapsed="0.001069"/>
+</kw>
+<var name="${i}">{'id': 17, 'name': 'Keurig K-Elite Coffee Maker', 'description': 'The Keurig K-Elite Coffee Maker features a strong brew setting and iced coffee setting.', 'price': 169.99, 'category': 'Home &amp; Kitchen...</var>
+<status status="PASS" start="2025-06-14T21:36:54.615532" elapsed="0.002133"/>
+</iter>
+<iter>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>${i["id"]} == 10</arg>
+<arg>Set To Dictionary</arg>
+<arg>${i}</arg>
+<arg>price</arg>
+<arg>100</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2025-06-14T21:36:54.618729" elapsed="0.002159"/>
+</kw>
+<var name="${i}">{'id': 18, 'name': 'iRobot Roomba i7+ Robot Vacuum', 'description': 'The iRobot Roomba i7+ Robot Vacuum features automatic dirt disposal and smart mapping.', 'price': 799.99, 'category': 'Home &amp; Kitch...</var>
+<status status="PASS" start="2025-06-14T21:36:54.618729" elapsed="0.002159"/>
+</iter>
+<iter>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>${i["id"]} == 10</arg>
+<arg>Set To Dictionary</arg>
+<arg>${i}</arg>
+<arg>price</arg>
+<arg>100</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2025-06-14T21:36:54.620888" elapsed="0.002110"/>
+</kw>
+<var name="${i}">{'id': 19, 'name': 'Ninja Foodi Digital Air Fry Oven', 'description': 'The Ninja Foodi Digital Air Fry Oven features 8 functions and a 60-second preheat.', 'price': 209.99, 'category': 'Home &amp; Kitchen...</var>
+<status status="PASS" start="2025-06-14T21:36:54.620888" elapsed="0.002110"/>
+</iter>
+<iter>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>${i["id"]} == 10</arg>
+<arg>Set To Dictionary</arg>
+<arg>${i}</arg>
+<arg>price</arg>
+<arg>100</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2025-06-14T21:36:54.624073" elapsed="0.001078"/>
+</kw>
+<var name="${i}">{'id': 20, 'name': 'Cuisinart ICE-70 Ice Cream Maker', 'description': 'The Cuisinart ICE-70 Ice Cream Maker features a 2-quart capacity and 3 settings.', 'price': 139.99, 'category': 'Home &amp; Kitchen',...</var>
+<status status="PASS" start="2025-06-14T21:36:54.622998" elapsed="0.002153"/>
+</iter>
+<var>${i}</var>
+<value>@{data}</value>
+<status status="PASS" start="2025-06-14T21:36:54.574579" elapsed="0.050572"/>
+</for>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-06-14T21:36:54.636530" level="INFO">${updated_data} = [
+  {
+    "id": 1,
+    "name": "Apple iPhone 12",
+    "description": "The Apple iPhone 12 features a 6.1-inch Super Retina XDR display and A14 Bionic chip.",
+    "price": 999.0,
+    "category": "Elect...</msg>
+<var>${updated_data}</var>
+<arg>json.dumps(${data}, indent=2)</arg>
+<arg>modules=json</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2025-06-14T21:36:54.627571" elapsed="0.008959"/>
+</kw>
+<kw name="Create File" owner="OperatingSystem">
+<msg time="2025-06-14T21:36:54.730795" level="INFO" html="true">Created file '&lt;a href="file://D:\Python folder\python_projects\RobotFramework\updated_data.json"&gt;D:\Python folder\python_projects\RobotFramework\updated_data.json&lt;/a&gt;'.</msg>
+<arg>updated_data.json</arg>
+<arg>${updated_data}</arg>
+<doc>Creates a file with the given content and encoding.</doc>
+<status status="PASS" start="2025-06-14T21:36:54.637561" elapsed="0.093234"/>
+</kw>
+<status status="PASS" start="2025-06-14T21:36:54.460699" elapsed="0.271091"/>
+</test>
+<status status="PASS" start="2025-06-14T21:36:54.180663" elapsed="0.553123"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="API test" id="s1" pass="1" fail="0" skip="0">API test</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2025-06-14T21:36:54.373852" level="ERROR">Error in file 'D:\Python folder\python_projects\RobotFramework\API_test.robot' on line 3: Importing library 'JSONLibrary' failed: ModuleNotFoundError: No module named 'JSONLibrary'
+Traceback (most recent call last):
+  None
+PYTHONPATH:
+  C:\Users\PUSPANJALI MUDULI\AppData\Local\Programs\Python\Python310\Scripts\robot.exe
+  C:\Users\PUSPANJALI MUDULI\AppData\Local\Programs\Python\Python310\python310.zip
+  C:\Users\PUSPANJALI MUDULI\AppData\Local\Programs\Python\Python310\DLLs
+  C:\Users\PUSPANJALI MUDULI\AppData\Local\Programs\Python\Python310\lib
+  C:\Users\PUSPANJALI MUDULI\AppData\Local\Programs\Python\Python310
+  C:\Users\PUSPANJALI MUDULI\AppData\Local\Programs\Python\Python310\lib\site-packages
+  C:\Users\PUSPANJALI MUDULI\AppData\Local\Programs\Python\Python310\lib\site-packages\win32
+  C:\Users\PUSPANJALI MUDULI\AppData\Local\Programs\Python\Python310\lib\site-packages\win32\lib
+  C:\Users\PUSPANJALI MUDULI\AppData\Local\Programs\Python\Python310\lib\site-packages\Pythonwin</msg>
+<msg time="2025-06-14T21:36:54.464905" level="WARN">Keyword 'RequestsLibrary.Get Request' is deprecated. Please use `GET On Session` instead.</msg>
+<msg time="2025-06-14T21:36:54.560856" level="WARN">Keyword 'RequestsLibrary.To Json' is deprecated. Please use ${resp.json()} instead. Have a look at the improved HTML output as pretty printing replacement.</msg>
+</errors>
+</robot>
