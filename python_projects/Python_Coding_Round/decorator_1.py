@@ -27,8 +27,8 @@ print(greet())
 #python decorator takes a function, adds some functionality and returns it.
 def make_pretty(func):
     def inner():
-        print("I got decorated")
         func()
+        print("I got decorated")
     return inner
 def ordinary():
     print("I am ordinary")

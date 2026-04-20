@@ -1,0 +1,5 @@
+[
+  {"operation": "add", "a": 2, "b": 3, "expected": 5},
+  {"operation": "subtract", "a": 5, "b": 2, "expected": 3},
+  {"operation": "multiplication", "a": 5, "b": 2, "expected": 10}
+]
