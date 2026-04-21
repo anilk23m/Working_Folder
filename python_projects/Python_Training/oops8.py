@@ -43,21 +43,21 @@ print("Address: ", s1.getAdd())
 # s = Son()
 # s.display_property()
 #
-# class Father:
-#     def __init__(self):
-#         self.property = 800000
-#
-#     def display_property(self):
-#         print("Father property", self.property)
-#
-# class Son(Father):
-#     def __init__(self):
-#         self.property = 200000
-#
-#     def display_property(self):
-#         print("Son property", self.property)
-# s = Son()
-# s.display_property()
+class Father:
+    def __init__(self):
+        self.property = 800000
+
+    def display_property(self):
+        print("Father property", self.property)
+
+class Son(Father):
+    def __init__(self):
+        self.property = 200000
+
+    def display_property(self):
+        print("Son property", self.property)
+s = Son()
+s.display_property()
 
 class Father:
 
