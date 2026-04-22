@@ -38,7 +38,6 @@ print(s1.x, s2.x)
 #static method - no dependency with cls or self.
 #@staticmethod
 
-
 #Namespace -
 # A name space represents a memory block where names are mapped to object
 

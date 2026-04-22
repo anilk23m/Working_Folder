@@ -1,24 +1,24 @@
 #Method resolution Order (MRO)
-class A(object):
+class A():
     def method(self):
         print("A class method")
         super().method()
-class B(object):
+class B():
     def method(self):
         print("B class method")
         super().method()
-class C(object):
+class C():
     def method(self):
         print("C class method")
 class X(A,B):
     def method(self):
         print("X class method")
         super().method()
-class Y(B,C):
+class Y(C):
     def method(self):
         print("Y class method")
         super().method()
-class P(X,Y,C):
+class P(X,Y):
     def method(self):
         print("P class method")
         super().method()
